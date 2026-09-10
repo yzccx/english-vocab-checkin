@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>英语单词打卡</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand" id="brandBtn" title="回到学习页">
+        <span class="brand-mark">词</span>
+        <span class="brand-text">
+          <strong>单词打卡</strong>
+          <small id="headerDate"></small>
+        </span>
+      </div>
+      <nav class="top-nav" id="topNav">
+        <button class="nav-btn active" data-page="home">学习</button>
+        <button class="nav-btn" data-page="stats">统计打卡</button>
+        <button class="nav-btn" data-page="settings">设置</button>
+      </nav>
+      <div class="header-badges">
+        <span class="badge" id="headerGoal" title="今日已学 / 目标">0 / 20</span>
+        <span class="badge badge-streak" id="headerStreak" title="当前连续打卡天数">连续 0 天</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="page-home" class="page active">
+      <div id="homeContent" class="page-body"></div>
+    </section>
+
+    <section id="page-stats" class="page">
+      <div id="statsContent" class="page-body"></div>
+    </section>
+
+    <section id="page-settings" class="page">
+      <div id="settingsContent" class="page-body"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <footer class="app-footer" id="appFooter"></footer>
+
+  <script src="js/data/words.js"></script>
+  <script src="js/passages.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
